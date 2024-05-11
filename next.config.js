@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+module.exports = {
+  basePath: process.env.NODE_ENV === 'production' ? '/<repository-name>' : '',
+  images: {
+    disableStaticImages: true
+  }
 };
-
-module.exports = nextConfig;

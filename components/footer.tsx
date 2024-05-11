@@ -11,7 +11,7 @@ export default function Footer() {
           alignItems: 'center',
         }}
       >
-        <p>© James Chen 2024</p>
+        <p>James Chen</p>
         <div>
           <a href="https://github.com/jchen1707/">
             <svg

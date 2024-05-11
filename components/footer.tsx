@@ -30,10 +30,10 @@ export default function Footer() {
             </svg>
           </a>
           <a href="https://www.linkedin.com/in/jameschen416/">
-            <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} />
+            <Image src="./linkedin.png" alt="LinkedIn" width={32} height={32} />
           </a>
           <a href="mailto:j997chen@uwaterloo.ca.com">
-            <Image src="/outlook.png" alt="Outlook" width={32} height={32} />
+            <Image src="./outlook.png" alt="Outlook" width={32} height={32} />
           </a>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Home() {
         <div className={styles.intro}>
           <div className={styles.portrait}>
             <Image
-              src="/temp-placeholder.jpg"
+              src="./temp-placeholder.jpg"
               alt="James Chen"
               width={500}
               height={500}

@@ -65,6 +65,25 @@
   gap: 550px;
   margin-left: 2rem;
 }
+
+.intro-text span {
+  display: inline-block;
+  animation: slide-in 0.5s forwards;
+  animation-delay: 0s; 
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1200px) {
   .intro {
     flex-direction: column;

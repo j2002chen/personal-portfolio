@@ -10,26 +10,26 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 4rem 8rem 4rem 4rem;
-  flex: 1 0 auto; /* Add this */
+  flex: 1 0 auto;
   background-color: #333;
   font-family: 'Roboto', sans-serif;
   color: #fff;
 }
 
 .description {
-  color: #aaa; /* Make the text more greyed out */
-  font-style: italic; /* Make the text italic */
-  margin-bottom: 1rem; /* Add some space below the description */
+  color: #aaa; 
+  font-style: italic; 
+  margin-bottom: 1rem; 
 }
 
 .jobDetails {
-  font-weight: bold; /* Make the job details bold */
-  margin-bottom: 1rem; /* Add some space below the job details */
+  font-weight: bold; 
+  margin-bottom: 1rem; 
 }
 
 .companyName {
-  margin-top: 2rem; /* Add some space above the company name */
-  font-size: 1.5em; /* Increase the font size */
+  margin-top: 2rem; 
+  font-size: 1.5em; 
 }
 
 .body {
@@ -121,7 +121,7 @@
   font-size: 1.2em;
   font-weight: 500;
   letter-spacing: 0.05em;
-  margin-top: auto; /* Add this to push the footer to the bottom */
+  margin-top: auto; 
 }
 
 .footer div {

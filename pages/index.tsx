@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>James Chen Portfolio</title>
         <meta name="description" content="James Chen Portfolio" />
@@ -25,14 +25,14 @@ export default function Home() {
               className={styles.image}
             />
           </div>
-            <h1 className={styles['intro-text']}>
-              {"Hey! I'm James Chen".split("").map((char, index) => (
-                <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </h1>
-          </div>
+          <h1 className={styles['intro-text']}>
+            {"Hey! I'm James Chen".split("").map((char, index) => (
+              <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </h1>
+        </div>
         <div className={styles.body}>
           <h2>ABOUT ME</h2>
           <p>
@@ -51,6 +51,6 @@ export default function Home() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

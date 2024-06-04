@@ -31,7 +31,7 @@ export default function Experience() {
           learning methods
         </p>
         <p className={styles.jobDetails}>
-          Led both model design & optimization processes for classification
+          Led graph neural network model optimization processes for classification
           task predicting patients&apos; likeliness of developing
           cardiovascular disorders as well as various regression models
           predicting the progression of users&apos; self reported biometrics.

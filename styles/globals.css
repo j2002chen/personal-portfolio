@@ -91,3 +91,11 @@ a {
     color-scheme: dark;
   }
 }
+
+colors {
+  light-purp: #18181a;
+  background-color: #0d0d0d;
+  primary-accent: #8553f9;
+  text-color: #fcfcfc;
+  subtext-color: #94a3b8;
+}

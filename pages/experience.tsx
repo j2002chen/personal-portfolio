@@ -8,6 +8,12 @@ export default function Experience() {
       <Header />
       <main className={styles.main}>
         <h2 className={styles.companyName}>
+          Mircom Technologies Ltd. - Software Development Engineer Intern
+        </h2>
+        <p className={styles.description}>
+          Fire and Security and Security Solutions.
+        </p>
+        <h2 className={styles.companyName}>
           Swan Cloud Inc. - Software Engineer Intern
         </h2>
         <p className={styles.description}>

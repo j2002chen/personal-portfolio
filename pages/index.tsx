@@ -38,7 +38,8 @@ export default function Home() {
           <p>
             I&apos;m a 3rd-year Mechatronics Engineering Student at the
             University of Waterloo. I have completed internships working in
-            full-stack development, machine learning, and data engineering.
+            full-stack development and data engineering. 
+            I am currently seeking Summer 2025 SWE internships!
           </p>
           <p>Some of my hobbies include:</p>
           <ul>

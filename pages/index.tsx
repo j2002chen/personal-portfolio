@@ -3,6 +3,32 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Image from 'next/image';
+import IconCloud from '../components/icon-cloud';
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "cplusplus",
+  "MQTT",
+  "QTT",
+  "react",
+  "python",
+  "go",
+  "nodedotjs",
+  "pytorch",
+  "apachekafka",
+  "apachespark",
+  "apacheairflow",
+  "express",
+  "amazonaws",
+  "nginx",
+  "redis",
+  "docker",
+  "jenkins",  
+  "kubernetes",
+  "git",
+  "jira",
+];
 
 export default function Home() {
   return (
@@ -50,6 +76,9 @@ export default function Home() {
             <li>Reading</li>
           </ul>
         </div>
+        <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8 ">
+      <IconCloud iconSlugs={slugs} />
+    </div>
       </main>
       <Footer />
     </div>

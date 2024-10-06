@@ -1,0 +1,50 @@
+.educationItem {
+  margin-top: 1rem; 
+  padding-left: 5rem; 
+}
+
+.educationDetails {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+  flex-wrap: nowrap; 
+}
+
+.textColor {
+  color: var(--text-color);
+}
+
+.subtextColor {
+  color: var(--subtext-color);
+}
+
+.hiddenArrow {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-right: 0.5rem; 
+}
+
+.educationItem:hover .hiddenArrow {
+  opacity: 1;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.period {
+  margin-left: 6rem;
+  width: auto; 
+  text-align: right; 
+  white-space: nowrap; 
+  font-family: var(--font-mono); 
+}
+
+.programText {
+  font-size: 0.875rem; 
+  font-family: var(--font-mono); 
+}
+
+.heading {
+  margin-left: 5rem; 
+}

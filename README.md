@@ -1,3 +1,3 @@
-## personal-portfolio
+# personal-portfolio
 
-WIP-Learn more about me!
+Learn more about me!

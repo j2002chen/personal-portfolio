@@ -49,7 +49,7 @@ const WorkExperience = () => {
 
   return (
     <div className={`container mx-auto px-4 ${styles.container}`}>
-      <h2 className="text-3xl font-bold mb-7" style={{ fontFamily: 'var(--font-mono)', paddingBottom: '1rem', marginLeft: '2rem' }}>Work Experience</h2>
+      <h2 className="text-3xl font-bold mb-7" style={{ fontFamily: 'var(--font-mono)', marginLeft: '2rem' }}>Work Experience</h2>
       {experiences.map((exp, index) => (
         <div 
           key={index} 

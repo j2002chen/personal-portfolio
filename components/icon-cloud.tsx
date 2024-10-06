@@ -80,10 +80,15 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, [data, theme]);
 
   return (
-    // @ts-ignore
-    <Cloud {...cloudProps}>
+    <div className="container mx-auto px-4">
+      <h2 className="text-left text-3xl font-bold mb-4" style={{ color: '#8553f9' }}>
+        Some tools that I&apos;ve worked with...
+      </h2>
       {/* @ts-ignore */}
-      <>{renderedIcons}</>
-    </Cloud>
+      <Cloud {...cloudProps}>
+        {/* @ts-ignore */}
+        <>{renderedIcons}</>
+      </Cloud>
+    </div>
   );
 }

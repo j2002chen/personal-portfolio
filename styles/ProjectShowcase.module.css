@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Import a modern font */
+
+.container {
+  background-color: #0d0d0d; 
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem; 
+  flex-direction: column; 
+}
+
+.heading {
+  font-family: 'Roboto', sans-serif; 
+  color: #8553f9; 
+  font-size: 2rem; 
+  margin-bottom: 1.5rem;
+  text-align: left; 
+  width: 100%; 
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; 
+  width: 100%;
+}
+
+.projectCard {
+  width: 100%; 
+  max-width: 600px; 
+  min-width: 600px;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+}
+
+.projectCard:last-child {
+  margin-bottom: 0;
+}
+
+.projectCardLink {
+  display: block; 
+  text-decoration: none; 
+  margin-bottom: 2.5rem; 
+}
+
+.gradient1 {
+  background: linear-gradient(to bottom right, #8553f9, #a37ffc, #c2abfd);
+}
+
+.gradient2 {
+  background: linear-gradient(to bottom right, #8553f9, #6e3cd7, #5725b5);
+}
+
+.gradient3 {
+  background: linear-gradient(to bottom right, #8553f9, #9d75fa, #b597fb);
+}
+
+.projectImage {
+  width: 100%;
+  height: 18rem; 
+  object-fit: cover;
+  object-position: center; 
+}
+
+.projectInfo {
+  padding: 1.25rem;
+  text-align: left; 
+  flex-grow: 1;
+}
+
+.projectName {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.projectRole {
+  font-size: 0.875rem;
+  color: #e9d8fd;
+  margin-bottom: 0.75rem;
+}
+
+.projectDescription {
+  color: white;
+  font-size: 1rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-bottom: 1rem; 
+  }
+
+  .projectCard {
+    margin-bottom: 1.5rem;
+  }
+
+  .projectCardLink {
+    margin-bottom: 1.5rem; 
+  }
+
+  .projectImage {
+    height: 14rem; 
+  }
+
+  .projectName {
+    font-size: 1.125rem;
+  }
+
+  .projectRole {
+    font-size: 0.75rem;
+  }
+
+  .projectDescription {
+    font-size: 0.875rem;
+  }
+}

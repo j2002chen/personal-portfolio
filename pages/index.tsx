@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { DynamicCloud } from '../components/icon-cloud';
 import Education from '../components/education';
 import { renderSimpleIcon, ICloud, SimpleIcon } from "react-icon-cloud";
-import { invertBg, lightTheme, ThemedH1, ThemeProvider } from "../hooks/use-theme";
+import { invertBg } from "../hooks/use-theme";
 
 
 

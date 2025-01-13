@@ -1,61 +1,7 @@
-"use client";
-
-import { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
-import {
-  Cloud,
-  fetchSimpleIcons,
-  ICloud,
-  renderSimpleIcon,
-  SimpleIcon,
-} from "react-icon-cloud";
-
-export const cloudProps: Omit<ICloud, "children"> = {
-  containerProps: {
-    style: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: 40,
-    },
-  },
-  options: {
-    reverse: true,
-    depth: 1,
-    wheelZoom: false,
-    imageScale: 2,
-    activeCursor: "default",
-    tooltip: "native",
-    initial: [0.1, -0.1],
-    clickToFront: 500,
-    tooltipDelay: 0,
-    outlineColour: "#0000",
-    maxSpeed: 0.04,
-    minSpeed: 0.02,
-    // dragControl: false,
-  },
-};
-
-export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
-  const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
-  const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
-  const minContrastRatio = theme === "dark" ? 2 : 1.2;
-
-  return renderSimpleIcon({
-    icon,
-    bgHex,
-    fallbackHex,
-    minContrastRatio,
-    size: 42,
-    aProps: {
-      href: undefined,
-      target: undefined,
-      rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
-    },
-  });
-};
+import React from "react";
+import { fetchSimpleIcons, Cloud } from "react-icon-cloud";
+import { renderCustomIcon, cloudProps } from "../pages/index";
+import { useTheme } from "../hooks/use-theme";
 
 export type DynamicCloudProps = {
   iconSlugs: string[];
@@ -63,32 +9,37 @@ export type DynamicCloudProps = {
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
-export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
-  const [data, setData] = useState<IconData | null>(null);
-  const { theme } = useTheme();
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * DynamicCloud component fetches and displays a cloud of icons based on provided slugs.
+ * It uses the `react-icon-cloud` library to render icons and relies on the current theme color.
+ * 
+ * Props:
+ * - iconSlugs: An array of strings representing the slugs of icons to be fetched and displayed.
+ * 
+ * The component fetches icon data asynchronously and updates its state. It then renders the icons
+ * using a custom renderer, applying the current theme's color.
+ */
 
-  useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
-  }, [iconSlugs]);
+/******  10bb2199-3563-46a6-8b64-bcc328eb8692  *******/
+export const DynamicCloud = (props: DynamicCloudProps) => {
+  const { color } = useTheme();
+  const [data, setData] = React.useState<IconData>();
+  React.useEffect(() => {
+    fetchSimpleIcons({ slugs: props.iconSlugs }).then(setData);
+  }, [props.iconSlugs]);
+  const renderedIcons = React.useMemo(() => {
+    if (!data) {
+      return null;
+    }
 
-  const renderedIcons = useMemo(() => {
-    if (!data) return null;
+    const icons = [];
+    for (const k of Object.keys(data.simpleIcons)) {
+      icons.push(data.simpleIcons[k]);
+    }
 
-    return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light"),
-    );
-  }, [data, theme]);
+    return icons.map((i) => renderCustomIcon(i, color));
+  }, [data, color]);
 
-  return (
-    <div className="container mx-auto px-4">
-      <h2 className="text-left text-3xl font-bold mb-4" style={{ color: '#8553f9' }}>
-        Some tools that I&apos;ve worked with...
-      </h2>
-      {/* @ts-ignore */}
-      <Cloud {...cloudProps}>
-        {/* @ts-ignore */}
-        <>{renderedIcons}</>
-      </Cloud>
-    </div>
-  );
-}
+  return <Cloud {...cloudProps}>{renderedIcons}</Cloud>;
+};

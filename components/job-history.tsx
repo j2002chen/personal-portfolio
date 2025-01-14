@@ -14,7 +14,7 @@ const WorkExperience = () => {
       company: 'Mircom Group of Companies',
       role: 'Software Development Engineering Intern',
       period: 'Sept 2024 - Dec 2024',
-      details: 'Architected & developed entire MVP for Mircom\'s remote panel access platform, streaming data from IoT devices with MQTT through a HiveMQ broker & setting up real time mobile notifications sent via a WebSocket server. Enhanced V2.4.2 of Mircom\'s QX Mini configurator by fixing bugs preventing the deletion of audio clips as well as implementing features to allow users to remove multiple devices from the configuration setup all at once.',
+      details: 'Architected & developed MVP for Mircom\'s remote panel access platform, streaming data from IoT devices with MQTT through AWS IoT Core & setting up real time mobile notifications sent via a WebSocket server. Enhanced V2.4.3 of Mircom\'s QX Mini configurator by fixing bugs preventing the deletion of audio clips as well as implementing features to allow users to remove multiple devices from the configuration setup all at once. Integrated Agentic RAG into pipelines to assist in generating testcases for QA.',
       logo: 'mircom.jpg'
     },
     {

@@ -110,9 +110,9 @@ export default function Home() {
           <div className={styles.body}>
             <h2>ABOUT ME</h2>
             <p className={styles['narrow-text']}>
-              I&apos;m a 3rd-year Mechatronics Engineering Student at the
-              University of Waterloo. I have completed internships working on
-              full-stack development and data engineering. 
+              I&apos;m a rising senior studying Mechatronics Engineering Student at the
+              University of Waterloo. I have two years of experience in Software Engineering, working on
+              full-stack web development and data engineering. 
               I am currently seeking Summer 2025 SWE internships!
             </p>
           </div>
